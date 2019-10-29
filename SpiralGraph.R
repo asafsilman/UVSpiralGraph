@@ -15,8 +15,8 @@ library(viridis)
 dataSource <- read_csv("dataSources.csv")
 framesToAnimate = 500
 
-# for (j in c(1:nrow(dataSource))) {
-for (j in c(1:1)) {
+# for (j in c(1:1)) { # Used for testing
+for (j in c(1:nrow(dataSource))) {
   # Create the data url from the ID in dataSource
   dataURL <- paste0("https://data.gov.au/api/3/action/package_show?id=", dataSource$dataID[j])
   locationName <- dataSource$location[j]
