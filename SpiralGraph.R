@@ -12,7 +12,7 @@ library(gganimate)
 library(viridis)
 
 # dataSources contains a list of all datasets provided by ARPANSA
-dataSource <- read_csv("dataSources.csv")
+dataSource <- read_csv("dataSources.csv") %>% filter(active=1)
 framesToAnimate = 500
 
 # for (j in c(1:1)) { # Used for testing
